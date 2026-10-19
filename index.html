@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Power Gap | Joanne Rodrigues</title>
+<meta name="description" content="The Power Gap: a forthcoming memoir by Joanne Rodrigues on who is believed, who is trusted, and who is seen as the rightful owner, and what interracial relationships reveal about power. Coming soon.">
+<meta property="og:title" content="The Power Gap | Coming Soon">
+<meta property="og:description" content="A forthcoming memoir and case study by Joanne Rodrigues on credibility, ownership, and power in interracial relationships and the institutions around them.">
+<meta property="og:type" content="book">
+<meta name="theme-color" content="#1b1226">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231b1226'/%3E%3Cpath d='M12 40h18V24h22' fill='none' stroke='%23e8a33d' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1b1226;
+    --ink-2:#2a1d3a;
+    --paper:#f7f2ea;
+    --paper-2:#efe7da;
+    --text:#241a2f;
+    --muted:#6b5f78;
+    --accent:#e8a33d;
+    --accent-deep:#b9731a;
+    --rule:rgba(36,26,47,.16);
+    --serif:'Fraunces',Georgia,'Times New Roman',serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--paper);color:var(--text);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{width:min(1080px,100% - 48px);margin-inline:auto}
+
+  /* Nav */
+  header.nav{position:absolute;inset:0 0 auto 0;z-index:5;padding:22px 0}
+  header.nav .wrap{display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:var(--serif);font-weight:600;color:#fff;text-decoration:none;letter-spacing:.02em}
+  .nav ul{display:flex;gap:26px;list-style:none}
+  .nav a.link{color:rgba(255,255,255,.8);text-decoration:none;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+  .nav a.link:hover{color:var(--accent)}
+
+  /* Hero */
+  .hero{position:relative;background:radial-gradient(1200px 600px at 85% 20%,#3a2354 0%,transparent 60%),var(--ink);color:#fff;padding:150px 0 110px;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:6px;background:linear-gradient(90deg,var(--accent),transparent 70%)}
+  .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+  .badge{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  .badge::before{content:"";width:34px;height:2px;background:var(--accent)}
+  h1{font-family:var(--serif);font-weight:800;font-size:clamp(3rem,8vw,5.6rem);line-height:.98;letter-spacing:-.02em;margin:22px 0 20px}
+  h1 em{font-style:normal;color:var(--accent)}
+  .subtitle{font-family:var(--serif);font-size:clamp(1.15rem,2.2vw,1.45rem);font-weight:400;color:rgba(255,255,255,.86);max-width:30ch}
+  .hook{margin-top:18px;max-width:44ch;color:rgba(255,255,255,.72);font-size:1.05rem}
+  .byline{margin-top:30px;color:rgba(255,255,255,.7);font-size:15px;letter-spacing:.04em}
+  .byline strong{color:#fff;font-weight:600}
+  .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+  .btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;transition:.2s}
+  .btn.primary{background:var(--accent);color:var(--ink)}
+  .btn.primary:hover{background:#f3b658;transform:translateY(-1px)}
+  .btn.ghost{border:1px solid rgba(255,255,255,.35);color:#fff}
+  .btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* Cover placeholder */
+  .cover{aspect-ratio:2/3;max-width:330px;margin-inline:auto;width:100%;border-radius:6px 14px 14px 6px;background:linear-gradient(160deg,#2f1d44,#150d1e);box-shadow:0 30px 60px rgba(0,0,0,.5),inset 10px 0 0 rgba(255,255,255,.05);padding:34px 28px;display:flex;flex-direction:column;justify-content:space-between;position:relative;border:1px solid rgba(255,255,255,.08)}
+  .cover .stair{position:absolute;right:26px;top:34px;width:150px;opacity:.95}
+  .cover .t{font-family:var(--serif);font-weight:800;font-size:2.6rem;line-height:.95;margin-top:150px}
+  .cover .t span{color:var(--accent)}
+  .cover .a{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+  .cover .soon{position:absolute;top:-14px;right:-14px;background:var(--accent);color:var(--ink);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:9px 14px;border-radius:999px;transform:rotate(6deg);box-shadow:0 8px 20px rgba(0,0,0,.35)}
+
+  /* Sections */
+  section{padding:96px 0}
+  .eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-deep);font-weight:600;margin-bottom:14px}
+  h2{font-family:var(--serif);font-weight:600;font-size:clamp(2rem,4.2vw,2.9rem);line-height:1.08;letter-spacing:-.01em;margin-bottom:26px}
+  .lede{font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,1.75rem);line-height:1.4;font-weight:400;max-width:34ch}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+  .two p+p{margin-top:18px}
+  .prose p{color:#3b2f48}
+
+  .definition{background:var(--ink);color:#fff;border-radius:20px;padding:48px;margin-top:56px;display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center}
+  .definition .big{font-family:var(--serif);font-weight:800;font-size:clamp(2.2rem,5vw,3.4rem);color:var(--accent);line-height:1}
+  .definition p{font-size:1.1rem;color:rgba(255,255,255,.9);max-width:60ch}
+
+  /* Video */
+  .watch{background:var(--ink);color:#fff}
+  .watch .eyebrow{color:var(--accent)}
+  .video{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 24px 50px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.1)}
+  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .watch .cap{margin:-8px 0 26px;color:rgba(255,255,255,.75);max-width:60ch}
+  .watch .alt{margin-top:18px;font-size:15px;color:rgba(255,255,255,.7)}
+  .watch .alt a{color:var(--accent);text-underline-offset:3px}
+
+  /* Letters */
+  .feature{font-family:var(--serif);font-size:clamp(1.25rem,2.4vw,1.7rem);line-height:1.45;border-left:4px solid var(--accent);padding-left:28px;margin:36px 0 18px;max-width:46ch}
+  .feature p+p{margin-top:.7em}
+  .feature-src,.letter .src{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-deep);font-weight:600}
+  .feature-src{padding-left:32px;margin-bottom:48px}
+  .letter-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .letter{background:#fff;border:1px solid var(--rule);border-radius:16px;padding:30px 28px}
+  .letter .src{margin-bottom:14px}
+  .letter blockquote{font-family:var(--serif);font-size:1.1rem;line-height:1.5}
+  .letter blockquote+blockquote{margin-top:16px;padding-top:16px;border-top:1px solid var(--rule)}
+  .note{margin-top:26px;font-size:14px;color:var(--muted)}
+
+  /* Parts */
+  .parts{background:var(--paper-2)}
+  .part-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+  .part{background:var(--paper);border:1px solid var(--rule);border-radius:16px;padding:30px 28px}
+  .part .n{font-family:var(--serif);font-weight:800;font-size:3rem;color:var(--accent);line-height:1}
+  .part .l{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:10px 0 10px;font-weight:600}
+  .part h3{font-family:var(--serif);font-weight:600;font-size:1.35rem;line-height:1.2;margin-bottom:10px}
+  .part p{font-size:15.5px;color:#4a3d58}
+
+  /* Audience */
+  .tags{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .tag{border:1px solid var(--rule);padding:11px 20px;border-radius:999px;font-size:15px;background:#fff8}
+  .tag:hover{border-color:var(--accent-deep);background:#fff}
+
+  /* Author */
+  .author{background:var(--ink);color:#fff}
+  .author .eyebrow{color:var(--accent)}
+  .author p{color:rgba(255,255,255,.82)}
+  .author p+p{margin-top:18px}
+  .author .also{margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.18);font-size:15px;color:rgba(255,255,255,.7)}
+  .author .also em{color:#fff}
+
+  footer{background:#120b19;color:rgba(255,255,255,.6);padding:34px 0;font-size:14px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+  footer a{text-decoration:none;color:rgba(255,255,255,.8)}
+  footer a:hover{color:var(--accent)}
+
+  @media (max-width:860px){
+    .hero{padding:130px 0 80px}
+    .hero-grid,.two{grid-template-columns:1fr;gap:40px}
+    .cover{max-width:260px}
+    .part-grid,.letter-grid{grid-template-columns:1fr}
+    .definition{grid-template-columns:1fr;padding:34px 28px}
+    .nav ul{gap:16px}
+    section{padding:72px 0}
+  }
+  @media (max-width:520px){.nav li.hide-s{display:none}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Joanne Rodrigues</a>
+    <ul>
+      <li class="hide-s"><a class="link" href="#about">The Book</a></li>
+      <li class="hide-s"><a class="link" href="#watch">Watch</a></li>
+      <li class="hide-s"><a class="link" href="#letters">Letters</a></li>
+      <li class="hide-s"><a class="link" href="#structure">Structure</a></li>
+      <li><a class="link" href="#author">Author</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="badge">Coming soon</div>
+        <h1>The Power <em>Gap</em></h1>
+        <p class="subtitle">How society challenges interracial relationships</p>
+        <p class="hook">What a marriage can reveal about who is believed, who is trusted, and who is seen as the rightful owner.</p>
+        <p class="byline">A memoir and case study by <strong>Joanne Rodrigues</strong></p>
+        <div class="cta">
+          <a class="btn primary" href="https://www.linkedin.com/in/joanne-c-rodrigues" target="_blank" rel="noopener">Follow for updates</a>
+          <a class="btn ghost" href="#about">About the book</a>
+        </div>
+      </div>
+
+      <div class="cover" role="img" aria-label="Placeholder cover for The Power Gap, coming soon">
+        <div class="soon">Coming soon</div>
+        <svg class="stair" viewBox="0 0 150 90" fill="none" aria-hidden="true">
+          <path d="M6 82H52V50H98V18H144" stroke="#e8a33d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="t">The<br>Power<br><span>Gap</span></div>
+        <div class="a">Joanne Rodrigues</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="eyebrow">About the book</div>
+      <h2>Marriage, it turns out, is a mirror.</h2>
+      <div class="two">
+        <p class="lede">The world projects its power dynamics onto a marriage. In an interracial one, you can watch it happen.</p>
+        <div class="prose">
+          <p><em>The Power Gap</em> is a first-person memoir and case study about the credibility, ownership, and leadership gap between women of color and white men. Interracial relationships make that gap visible: who is believed, who is assumed to own the property, and who is seen as the leader.</p>
+          <p>The book follows the author's marriage and divorce through four courts and draws on conversations with more than fifty interracial couples, along with legal experts, psychologists, and sociologists. It shows how institutions, from banks to courtrooms, quietly perpetuate unfairness, and what women of color can do about it.</p>
+        </div>
+      </div>
+
+      <div class="definition">
+        <div class="big">The Power Gap</div>
+        <p>The credibility, ownership, and leadership gap between women of color and white men, in institutions and in everyday life, felt most sharply inside interracial relationships.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="watch" class="watch">
+    <div class="wrap">
+      <div class="eyebrow">Watch</div>
+      <h2>The Appeals Court hearing.</h2>
+      <p class="cap">The author's appeal hearing, one of four courts the book follows.</p>
+      <div class="video">
+        <iframe src="https://drive.google.com/file/d/1qYycCp3fjava6g8ZMa_l-rp2TphYZh9r/preview" title="Video: Appeals Court hearing" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p class="alt">Video not loading? <a href="https://drive.google.com/file/d/1qYycCp3fjava6g8ZMa_l-rp2TphYZh9r/view" target="_blank" rel="noopener">Open it in Google Drive</a>.</p>
+    </div>
+  </section>
+
+  <section id="letters">
+    <div class="wrap">
+      <div class="eyebrow">Open letters</div>
+      <h2>In her own words.</h2>
+      <p class="lede" style="max-width:40ch">The author has written open letters to the courts she has appeared before. Excerpts follow.</p>
+
+      <div class="feature">
+        <p>&ldquo;All in the hope that one day, my pain will be valued the same as my ex-husband's.</p>
+        <p>My voice will be just as loud and garner the same response and attention.</p>
+        <p>That one day, I would be seen as just as human as my ex-husband.&rdquo;</p>
+      </div>
+      <div class="feature-src">Open letter to a California family court, July 2024</div>
+
+      <div class="letter-grid">
+        <article class="letter">
+          <div class="src">Open letter to a California appellate court, January 2026</div>
+          <blockquote>&ldquo;The Power Gap [is] the structural phenomenon in which individuals with social and institutional privilege, including racial and gender privilege, receive the benefit of doubt, the benefit of omission, and the benefit of procedural grace, while those without such privilege must prove and re-prove every fact, every dollar, every step.&rdquo;</blockquote>
+          <blockquote>&ldquo;All I ask&mdash;all I have ever asked&mdash;is to be treated equally under the law. Not advantage. Not privilege. Simply equality.&rdquo;</blockquote>
+        </article>
+        <article class="letter">
+          <div class="src">Open letter to a California family court, July 2024</div>
+          <blockquote>&ldquo;As a woman of color, I am held to an exceedingly high standard of scrutiny. It's like the porchlight is always shining brightly on me. I can have nothing and still there will be scrutiny &ndash; because I might get away with something. Anything. The default is that I am not trustworthy &ndash; that I am not worthy.&rdquo;</blockquote>
+        </article>
+      </div>
+      <p class="note">Names, case numbers, and other identifying details have been left out of these excerpts.</p>
+    </div>
+  </section>
+
+  <section id="structure" class="parts">
+    <div class="wrap">
+      <div class="eyebrow">How the book is organized</div>
+      <h2>Three parts: the problem, the effects, the way forward.</h2>
+      <div class="part-grid">
+        <article class="part">
+          <div class="n">I</div>
+          <div class="l">Part one</div>
+          <h3>Why the gap exists</h3>
+          <p>The societal power differential explained, and how it shows up inside an interracial relationship, told through the author's own story.</p>
+        </article>
+        <article class="part">
+          <div class="n">II</div>
+          <div class="l">Part two</div>
+          <h3>What the gap does</h3>
+          <p>How it shapes the lives of women of color and white men, in institutions and in relationships, from property ownership to the complexities of interracial marriage.</p>
+        </article>
+        <article class="part">
+          <div class="n">III</div>
+          <div class="l">Part three</div>
+          <h3>How to close it</h3>
+          <p>Conversations with couples and experts, plus practical recommendations for strengthening relationships and empowering women of color, in institutions and in private life.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="audience">
+    <div class="wrap">
+      <div class="eyebrow">Who it's for</div>
+      <h2>For anyone who has wondered why some voices carry further than others.</h2>
+      <div class="tags">
+        <span class="tag">People in interracial relationships</span>
+        <span class="tag">Children of interracial couples</span>
+        <span class="tag">Professional women of color</span>
+        <span class="tag">Readers working through divorce</span>
+        <span class="tag">Anyone who follows courts and justice</span>
+        <span class="tag">Readers curious about race and identity</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="author" class="author">
+    <div class="wrap two">
+      <div>
+        <div class="eyebrow">About the author</div>
+        <h2>Joanne Rodrigues</h2>
+      </div>
+      <div>
+        <p>Joanne Rodrigues is a data scientist, author, and public policy leader working at the intersection of AI, demographics, and equitable technology. She holds degrees in political science and demography from UC Berkeley, applicable mathematics from the London School of Economics, and international political economy from Georgetown.</p>
+        <p>She founded Clinic Price Check, a healthcare transparency company and 2020 TechCrunch Battlefield SF finalist, and has led analytics teams in Silicon Valley.</p>
+        <p class="also">Also by Joanne Rodrigues: <em>Product Analytics</em> (Addison-Wesley) and <em>Demographic Techniques for Data Scientists</em> (Springer Nature, forthcoming).</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="yr">2026</span> Joanne Rodrigues. <em>The Power Gap</em> is forthcoming.</span>
+    <a href="https://www.linkedin.com/in/joanne-c-rodrigues" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
