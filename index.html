@@ -193,11 +193,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   footer a{text-decoration:none;color:rgba(255,255,255,.8)}
   footer a:hover{color:var(--accent)}
 
+  /* Public records */
+  .records{background:var(--paper)}
+  .records h2{max-width:22ch;font-size:clamp(2.4rem,6vw,4rem)}
+  .rec-top{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;margin-top:28px;align-items:center}
+  .rec-top p{font-size:18px;color:#3b2f49}
+  .rec-top p+p{margin-top:16px}
+  .rec-stat{background:var(--ink);color:#fff;border-radius:18px;padding:34px 30px;border-top:5px solid var(--accent)}
+  .rec-stat .v{font-family:var(--serif);font-weight:800;font-size:clamp(3.6rem,8vw,5.4rem);line-height:1;color:var(--accent)}
+  .rec-stat .k{margin-top:12px;font-size:16px;line-height:1.45;color:rgba(255,255,255,.88)}
+  .rec-stat .s{margin-top:14px;font-size:12.5px;line-height:1.5;color:rgba(255,255,255,.6)}
+  .rec-h{font-family:var(--serif);font-weight:600;font-size:1.5rem;margin:56px 0 0}
+  .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:22px}
+  .rec-card{background:var(--paper-2);border:1px solid var(--rule);border-radius:16px;padding:26px 24px}
+  .rec-card .l{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-deep);font-weight:600;margin-bottom:10px}
+  .rec-card p{font-size:15.5px;color:#4a3d58}
+  .catch{margin-top:44px;border-left:4px solid var(--accent);padding:6px 0 6px 28px;max-width:62ch}
+  .catch h3{font-family:var(--serif);font-weight:600;font-size:1.45rem;margin-bottom:10px}
+  .catch p{font-size:16.5px;color:#3b2f49}
+  .rec-close{margin-top:40px;font-family:var(--serif);font-size:clamp(1.2rem,2.2vw,1.5rem);line-height:1.45;max-width:46ch}
+  .rec-src{margin-top:28px;font-size:12.5px;line-height:1.55;color:var(--muted);max-width:80ch}
+
   @media (max-width:860px){
     .hero{padding:130px 0 80px}
     .hero-grid,.two{grid-template-columns:1fr;gap:40px}
     .cover{max-width:260px}
-    .part-grid,.letter-grid{grid-template-columns:1fr}
+    .part-grid,.letter-grid,.rec-top,.rec-grid{grid-template-columns:1fr}
     .definition{grid-template-columns:1fr;padding:34px 28px}
     .appeal,.freeze-grid{grid-template-columns:1fr;gap:40px}
     .vs-row{grid-template-columns:1fr}
@@ -222,9 +243,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <ul>
       <li class="hide-s"><a class="link" href="#about">The Book</a></li>
       <li class="hide-s"><a class="link" href="#watch">Watch</a></li>
-      <li class="hide-s"><a class="link" href="#letters">Letters</a></li>
       <li class="hide-s"><a class="link" href="#freeze">Frozen</a></li>
+      <li class="hide-s"><a class="link" href="#records">Unpublished</a></li>
       <li class="hide-s"><a class="link" href="#structure">Structure</a></li>
+      <li class="hide-s"><a class="link" href="#letters">Letters</a></li>
       <li><a class="link" href="#author">Author</a></li>
     </ul>
   </div>
@@ -309,34 +331,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <section id="letters">
-    <div class="wrap">
-      <div class="eyebrow">Open letters</div>
-      <h2>In her own words.</h2>
-      <p class="lede" style="max-width:40ch">The author has written open letters to the courts she has appeared before. Excerpts follow.</p>
-
-      <div class="feature">
-        <p>&ldquo;All in the hope that one day, my pain will be valued the same as my ex-husband's.</p>
-        <p>My voice will be just as loud and garner the same response and attention.</p>
-        <p>That one day, I would be seen as just as human as my ex-husband.&rdquo;</p>
-      </div>
-      <div class="feature-src">Open letter to a California family court, July 2024</div>
-
-      <div class="letter-grid">
-        <article class="letter">
-          <div class="src">Open letter to a California appellate court, January 2026</div>
-          <blockquote>&ldquo;The Power Gap [is] the structural phenomenon in which individuals with social and institutional privilege, including racial and gender privilege, receive the benefit of doubt, the benefit of omission, and the benefit of procedural grace, while those without such privilege must prove and re-prove every fact, every dollar, every step.&rdquo;</blockquote>
-          <blockquote>&ldquo;All I ask&mdash;all I have ever asked&mdash;is to be treated equally under the law. Not advantage. Not privilege. Simply equality.&rdquo;</blockquote>
-        </article>
-        <article class="letter">
-          <div class="src">Open letter to a California family court, July 2024</div>
-          <blockquote>&ldquo;As a woman of color, I am held to an exceedingly high standard of scrutiny. It's like the porchlight is always shining brightly on me. I can have nothing and still there will be scrutiny &ndash; because I might get away with something. Anything. The default is that I am not trustworthy &ndash; that I am not worthy.&rdquo;</blockquote>
-        </article>
-      </div>
-      <p class="note">Names, case numbers, and other identifying details have been left out of these excerpts.</p>
-    </div>
-  </section>
-
   <section id="freeze" class="freeze">
     <div class="wrap">
       <div class="eyebrow">The federal case</div>
@@ -412,6 +406,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+  <section id="records" class="records">
+    <div class="wrap">
+      <div class="eyebrow">Public records</div>
+      <h2>Unpublished</h2>
+      <div class="rec-top">
+        <div>
+          <p>California has a long history of administrative opacity that harms vulnerable communities&mdash;from the 1851&ndash;1852 tribal treaties kept under a federal &lsquo;Injunction of Secrecy&rsquo; until 1905, which denied Native tribes their homelands, legal recourse, and federal status by burying negotiated agreements. While state institutions today frequently adopt performative social justice measures&mdash;such as symbolic land acknowledgments and public apologies&mdash;they continue to perpetuate the very administrative secrecy that caused historical harm, shielding modern judicial and administrative outcomes from true public accountability.</p>
+          <p>Unpublished opinions disproportionately represent poor and appellants of color. The California Civil Rights Department has identified them as a barrier to justice. Because they&rsquo;re so hard to find and aggregate, patterns in high-volume areas like family law, disability access, and discrimination claims go largely unexamined by researchers, advocates, and oversight bodies.</p>
+          <p>All of the appeals in my case were unpublished. I raised the access issue at oral argument and asked three times for my appeal&rsquo;s opinion to be published. The court refused and offered no guidance on how to access California&rsquo;s unpublished opinions.</p>
+        </div>
+        <div class="rec-stat">
+          <div class="v">91%</div>
+          <div class="k">of Court of Appeal opinions designated &ldquo;unpublished&rdquo;</div>
+        </div>
+      </div>
+
+      <h3 class="rec-h">Why This Matters</h3>
+      <div class="rec-grid">
+        <article class="rec-card">
+          <div class="l">No Public Index</div>
+          <p>Unpublished decisions are excluded from official reports, non-citable as precedent, and virtually unsearchable.</p>
+        </article>
+        <article class="rec-card">
+          <div class="l">Civil Rights Blindspots</div>
+          <p>The California Civil Rights Department cited unpublished opinions as a &ldquo;barrier to justice,&rdquo; effectively acting as an area where unequal application of the law may occur.</p>
+        </article>
+        <article class="rec-card">
+          <div class="l">Shielding Misconduct</div>
+          <p>Low-scrutiny unpublished rulings allow procedural irregularities and judicial bias to bypass California Supreme Court review.</p>
+        </article>
+      </div>
+
+      <div class="catch">
+        <h3>The CPRA Catch-22</h3>
+        <p>All six California District Courts of Appeal require specific case numbers to fulfill California Public Records Act (CPRA) requests for unpublished decisions. Yet, the state provides no searchable system to find those case numbers, making comprehensive public oversight impossible.</p>
+      </div>
+
+    </div>
+  </section>
+
   <section id="structure" class="parts">
     <div class="wrap">
       <div class="eyebrow">How the book is organized</div>
@@ -421,19 +455,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="n">I</div>
           <div class="l">Part one</div>
           <h3>Why the gap exists</h3>
-          <p>The societal power differential explained, and how it shows up inside an interracial relationship, told through the author's own story.</p>
+          <p>How a societal power differential works, and how it plays out inside an interracial relationship, told through the author&rsquo;s own story.</p>
         </article>
         <article class="part">
           <div class="n">II</div>
           <div class="l">Part two</div>
           <h3>What the gap does</h3>
-          <p>How it shapes the lives of women of color and white men, in institutions and in relationships, from property ownership to the complexities of interracial marriage.</p>
+          <p>How it shapes the lives of women of color and of white men, in institutions and in relationships, from who owns property to the strains of interracial marriage.</p>
         </article>
         <article class="part">
           <div class="n">III</div>
           <div class="l">Part three</div>
           <h3>How to close it</h3>
-          <p>Conversations with couples and experts, plus practical recommendations for strengthening relationships and empowering women of color, in institutions and in private life.</p>
+          <p>A close look at California&rsquo;s legal history of secrecy and performative social justice, from the 1851&ndash;52 tribal treaties to today&rsquo;s unpublished opinions. Conversations with experts, and practical recommendations for protecting and empowering women of color, in institutions and in private life.</p>
         </article>
       </div>
     </div>
@@ -454,6 +488,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+  <section id="letters">
+    <div class="wrap">
+      <div class="eyebrow">Open letters</div>
+      <h2>In her own words.</h2>
+      <p class="lede" style="max-width:40ch">The author has written open letters to the courts she has appeared before. Excerpts follow.</p>
+
+      <div class="feature">
+        <p>&ldquo;All in the hope that one day, my pain will be valued the same as my ex-husband's.</p>
+        <p>My voice will be just as loud and garner the same response and attention.</p>
+        <p>That one day, I would be seen as just as human as my ex-husband.&rdquo;</p>
+      </div>
+      <div class="feature-src">Open letter to a California family court, July 2024</div>
+
+      <div class="letter-grid">
+        <article class="letter">
+          <div class="src">Open letter to a California appellate court, January 2026</div>
+          <blockquote>&ldquo;The Power Gap [is] the structural phenomenon in which individuals with social and institutional privilege, including racial and gender privilege, receive the benefit of doubt, the benefit of omission, and the benefit of procedural grace, while those without such privilege must prove and re-prove every fact, every dollar, every step.&rdquo;</blockquote>
+          <blockquote>&ldquo;All I ask&mdash;all I have ever asked&mdash;is to be treated equally under the law. Not advantage. Not privilege. Simply equality.&rdquo;</blockquote>
+        </article>
+        <article class="letter">
+          <div class="src">Open letter to a California family court, July 2024</div>
+          <blockquote>&ldquo;As a woman of color, I am held to an exceedingly high standard of scrutiny. It's like the porchlight is always shining brightly on me. I can have nothing and still there will be scrutiny &ndash; because I might get away with something. Anything. The default is that I am not trustworthy &ndash; that I am not worthy.&rdquo;</blockquote>
+        </article>
+      </div>
+      <p class="note">Names, case numbers, and other identifying details have been left out of these excerpts.</p>
+    </div>
+  </section>
+
   <section id="author" class="author">
     <div class="wrap two">
       <div>
@@ -468,6 +530,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 </main>
+
+
 
 <footer>
   <div class="wrap">
